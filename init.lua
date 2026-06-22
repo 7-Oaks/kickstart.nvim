@@ -181,6 +181,20 @@ do
     vim.opt.ruler = false
     end
   end, {})
+
+  vim.api.nvim_create_user_command('Tguif', function()
+    if vim.o.laststatus == 0 then
+      vim.opt.laststatus = 2
+      vim.opt.ruler = true
+      vim.opt.number = true
+      vim.opt.fillchars:append({ eob = "~"})
+    else
+      vim.opt.laststatus = 0
+      vim.opt.ruler = false
+      vim.opt.number = false
+      vim.opt.fillchars:append({ eob = " "})
+    end
+  end, {})
 end
 
 -- ============================================================
