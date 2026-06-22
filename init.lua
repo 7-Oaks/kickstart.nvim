@@ -171,6 +171,16 @@ do
   -- instead raise a dialog asking if you wish to save the current file(s)
   -- See `:help 'confirm'`
   vim.o.confirm = true
+
+  vim.api.nvim_create_user_command('Tgui', function()
+    if vim.o.laststatus == 0 then
+      vim.opt.laststatus = 2
+      vim.opt.ruler = true
+    else
+      vim.opt.laststatus = 0
+    vim.opt.ruler = false
+    end
+  end, {})
 end
 
 -- ============================================================
