@@ -176,9 +176,11 @@ do
     if vim.o.laststatus == 0 then
       vim.opt.laststatus = 2
       vim.opt.ruler = true
+      print("")
     else
       vim.opt.laststatus = 0
-    vim.opt.ruler = false
+      vim.opt.ruler = false
+      print("")
     end
   end, {})
 
@@ -188,11 +190,13 @@ do
       vim.opt.ruler = true
       vim.opt.number = true
       vim.opt.fillchars:append({ eob = "~"})
+      print("")
     else
       vim.opt.laststatus = 0
       vim.opt.ruler = false
       vim.opt.number = false
       vim.opt.fillchars:append({ eob = " "})
+      print("")
     end
   end, {})
 end
