@@ -375,6 +375,18 @@ do
   require('guess-indent').setup {}
 
   vim.pack.add({'https://github.com/vladdoster/remember.nvim'}) require("remember").setup({})
+  vim.pack.add({'https://github.com/vyfor/cord.nvim'}) require('cord').setup(
+    {
+      display = {
+        view = 'editor',
+      },
+      text = {
+        editing = 'No file name 4 u >:3',
+        viewing = '',
+        workspace = '',
+
+      }
+    })
   -- Here is a more advanced configuration example that passes options to `gitsigns.nvim`
   --
   -- See `:help gitsigns` to understand what each configuration key does.
