@@ -381,7 +381,8 @@ do
         view = 'editor',
       },
       text = {
-        editing = 'No file name 4 u >:3',
+        -- editing = 'No file name 4 u >:3',
+        editing = 'Let me guess, you "need" more?',
         viewing = '',
         workspace = '',
 
